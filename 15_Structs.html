@@ -1,0 +1,603 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Structs | Elixir官网的入门教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./16_Protocols.html" />
+    
+    
+    <link rel="prev" href="./14_Module_attributes.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="15" data-basepath="." data-revision="Tue Aug 09 2016 21:03:17 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1_Introduction.html">
+            
+                
+                    <a href="./1_Introduction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2_Basic_types.html">
+            
+                
+                    <a href="./2_Basic_types.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Basic types
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="3_Basic_operators.html">
+            
+                
+                    <a href="./3_Basic_operators.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Basic operators
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="4_Pattern_matching.html">
+            
+                
+                    <a href="./4_Pattern_matching.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pattern matching
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="5_case_cond_and_if.html">
+            
+                
+                    <a href="./5_case_cond_and_if.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Case cond and if
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="6_Binaries_strings_and_char_lists.html">
+            
+                
+                    <a href="./6_Binaries_strings_and_char_lists.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Binaries strings and char lists
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="7_Keywords_and_maps.html">
+            
+                
+                    <a href="./7_Keywords_and_maps.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Keywords and maps
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="8_Modules.html">
+            
+                
+                    <a href="./8_Modules.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Modules
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="9_Rescursion.html">
+            
+                
+                    <a href="./9_Rescursion.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Rescursion
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="10_Enumerables_and_streams.html">
+            
+                
+                    <a href="./10_Enumerables_and_streams.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Enumerables and streams
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="11_Processes.html">
+            
+                
+                    <a href="./11_Processes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Processes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="12_IO_and_the_file_system.html">
+            
+                
+                    <a href="./12_IO_and_the_file_system.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Io and the file system
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="13_alias_require_and_import.html">
+            
+                
+                    <a href="./13_alias_require_and_import.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Alias require and import
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="14_Module_attributes.html">
+            
+                
+                    <a href="./14_Module_attributes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Module attributes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="15" data-path="15_Structs.html">
+            
+                
+                    <a href="./15_Structs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Structs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="16_Protocols.html">
+            
+                
+                    <a href="./16_Protocols.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Protocols
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="17_Comprehensions.html">
+            
+                
+                    <a href="./17_Comprehensions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Comprehensions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="18_sigils.html">
+            
+                
+                    <a href="./18_sigils.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Sigils
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="19_try_catch_and_rescue.html">
+            
+                
+                    <a href="./19_try_catch_and_rescue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        Try catch and rescue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="20" data-path="20_Typespecs_and_behaviours.html">
+            
+                
+                    <a href="./20_Typespecs_and_behaviours.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>20.</b>
+                        
+                        Typespecs and behaviours
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21" data-path="21_Erlang_libraries.html">
+            
+                
+                    <a href="./21_Erlang_libraries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.</b>
+                        
+                        Erlang libraries
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="22" data-path="22_Where_to_go_next.html">
+            
+                
+                    <a href="./22_Where_to_go_next.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>22.</b>
+                        
+                        Where to go next
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Elixir官网的入门教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E7%BB%93%E6%9E%84%E4%BD%93">&#x7ED3;&#x6784;&#x4F53;</h1>
+<ol>
+<li>&#x5B9A;&#x4E49;&#x7ED3;&#x6784;&#x4F53;</li>
+<li>&#x8BBF;&#x95EE;&#x548C;&#x66F4;&#x65B0;&#x7ED3;&#x6784;&#x4F53;</li>
+<li>&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5E95;&#x5C42;&#x662F;&#x6620;&#x5C04;</li>
+</ol>
+<p>&#x5728;&#x7B2C;&#x4E03;&#x7AE0;,&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x8FC7;&#x4E86;&#x6620;&#x5C04;:</p>
+<pre><code>iex&gt; map = %{a: 1, b: 2}
+%{a: 1, b: 2}
+iex&gt; map[:a]
+1
+iex&gt; %{map | a: 3}
+%{a: 3, b: 2}
+</code></pre><p>&#x7ED3;&#x6784;&#x4F53;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x6620;&#x5C04;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;,&#x63D0;&#x4F9B;&#x4E86;&#x7F16;&#x8BD1;&#x65F6;&#x68C0;&#x67E5;&#x548C;&#x9ED8;&#x8BA4;&#x503C;&#x8BBE;&#x7F6E;.</p>
+<h1 id="%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E4%BD%93">&#x5B9A;&#x4E49;&#x7ED3;&#x6784;&#x4F53;</h1>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>defstruct</code>&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x7ED3;&#x6784;&#x4F53;:</p>
+<pre><code>iex&gt; defmodule User do
+...&gt;   defstruct name: &quot;John&quot;, age: 27
+...&gt; end
+</code></pre><p><code>defstruct</code>&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x5217;&#x8868;&#x5B9A;&#x4E49;&#x4E86;&#x7ED3;&#x6784;&#x4F53;&#x9886;&#x57DF;&#x4E2D;&#x7684;&#x9ED8;&#x8BA4;&#x503C;.</p>
+<p>&#x7ED3;&#x6784;&#x4F53;&#x4F1A;&#x4EE5;&#x5176;&#x5B9A;&#x4E49;&#x6240;&#x5904;&#x4E8E;&#x7684;&#x6A21;&#x5757;&#x6765;&#x547D;&#x540D;.&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;,&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>User</code>&#x7684;&#x7ED3;&#x6784;&#x4F53;.</p>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x7528;&#x4E0E;&#x521B;&#x5EFA;&#x6620;&#x5C04;&#x7C7B;&#x4F3C;&#x7684;&#x8BED;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x7ED3;&#x6784;&#x4F53;<code>User</code>:</p>
+<pre><code>iex&gt; %User{}
+%User{age: 27, name: &quot;John&quot;}
+iex&gt; %User{name: &quot;Meg&quot;}
+%User{age: 27, name: &quot;Meg&quot;}
+</code></pre><p>&#x7ED3;&#x6784;&#x4F53;&#x63D0;&#x4F9B;&#x4E86;&#x7F16;&#x8BD1;&#x65F6;&#x786E;&#x8BA4;,&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x6709;&#x5728;<code>defsturct</code>&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x7684;&#x9886;&#x57DF;&#x80FD;&#x591F;&#x5B58;&#x5728;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x4E2D;:</p>
+<pre><code>iex&gt; %User{oops: :field}
+** (CompileError) iex:3: unknown key :oops for struct User
+</code></pre><h1 id="%E8%8E%B7%E5%8F%96%E4%B8%8E%E6%9B%B4%E6%96%B0%E7%BB%93%E6%9E%84%E4%BD%93">&#x83B7;&#x53D6;&#x4E0E;&#x66F4;&#x65B0;&#x7ED3;&#x6784;&#x4F53;</h1>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x8BA8;&#x8BBA;&#x6620;&#x5C04;&#x65F6;,&#x6211;&#x4EEC;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x83B7;&#x53D6;&#x548C;&#x66F4;&#x65B0;&#x6620;&#x5C04;&#x4E2D;&#x7684;&#x9886;&#x57DF;.&#x5BF9;&#x4E0E;&#x7ED3;&#x6784;&#x4F53;,&#x8FD8;&#x662F;&#x540C;&#x6837;&#x7684;&#x6280;&#x672F;(&#x540C;&#x6837;&#x7684;&#x8BED;&#x6CD5;):</p>
+<pre><code>iex&gt; john = %User{}
+%User{age: 27, name: &quot;John&quot;}
+iex&gt; john.name
+&quot;John&quot;
+iex&gt; meg = %{john | name: &quot;Meg&quot;}
+%User{age: 27, name: &quot;Meg&quot;}
+iex&gt; %{meg | oops: :field}
+** (KeyError) key :oops not found in: %User{age: 27, name: &quot;Meg&quot;}
+</code></pre><p>&#x5F53;&#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x7B26;&#x53F7;(<code>|</code>)&#x65F6;,VM&#x4F1A;&#x610F;&#x8BC6;&#x5230;&#x6CA1;&#x6709;&#x65B0;&#x7684;&#x952E;&#x6DFB;&#x52A0;&#x5230;&#x7ED3;&#x6784;&#x4F53;&#x4E2D;,&#x540C;&#x65F6;&#x4F1A;&#x5141;&#x8BB8;&#x5E95;&#x5C42;&#x7684;&#x6620;&#x5C04;&#x5206;&#x4EAB;&#x5B83;&#x4EEC;&#x7684;&#x7ED3;&#x6784;.&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;,<code>john</code>&#x548C;<code>meg</code>&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5206;&#x4EAB;&#x7740;&#x76F8;&#x540C;&#x7684;&#x952E;&#x7ED3;&#x6784;.</p>
+<p>&#x7ED3;&#x6784;&#x4F53;&#x4E5F;&#x53EF;&#x7528;&#x4E8E;&#x6A21;&#x5F0F;&#x5339;&#x914D;,&#x9700;&#x8981;&#x540C;&#x65F6;&#x5339;&#x914D;&#x7279;&#x5B9A;&#x7684;&#x952E;&#x503C;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x7C7B;&#x578B;:</p>
+<pre><code>iex&gt; %User{name: name} = john
+%User{age: 27, name: &quot;John&quot;}
+iex&gt; name
+&quot;John&quot;
+iex&gt; %User{} = %{}
+** (MatchError) no match of right hand side value: %{}
+</code></pre><h1 id="%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%BA%95%E5%B1%82%E6%98%AF%E6%98%A0%E5%B0%84">&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5E95;&#x5C42;&#x662F;&#x6620;&#x5C04;</h1>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;,&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x6210;&#x529F;,&#x662F;&#x56E0;&#x4E3A;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5E95;&#x5C42;&#x662F;&#x88AB;&#x9501;&#x5B9A;&#x4E86;&#x9886;&#x57DF;&#x7684;&#x6620;&#x5C04;.&#x4F5C;&#x4E3A;&#x6620;&#x5C04;,&#x7ED3;&#x6784;&#x4F53;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&quot;&#x7279;&#x6B8A;&quot;&#x7684;&#x9886;&#x57DF;&#x53EB;&#x505A;<code>__struct__</code>,&#x91CC;&#x9762;&#x662F;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x540D;&#x5B57;:</p>
+<pre><code>iex&gt; is_map(john)
+true
+iex&gt; john.__struct__
+User
+</code></pre><p>&#x6CE8;&#x610F;&#x6211;&#x4EEC;&#x79F0;&#x7ED3;&#x6784;&#x4F53;&#x662F;<strong>&#x88F8;&#x9732;</strong>&#x7684;&#x6620;&#x5C04;,&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x5BF9;&#x6620;&#x5C04;&#x751F;&#x6548;&#x7684;&#x534F;&#x8BAE;,&#x7ED3;&#x6784;&#x4F53;&#x90FD;&#x4E0D;&#x53EF;&#x7528;.&#x4F8B;&#x5982;,&#x4F60;&#x65E2;&#x4E0D;&#x80FD;&#x679A;&#x4E3E;&#x4E5F;&#x4E0D;&#x80FD;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;:</p>
+<pre><code>iex&gt; john = %User{}
+%User{age: 27, name: &quot;John&quot;}
+iex&gt; john[:name]
+** (UndefinedFunctionError) undefined function: User.fetch/2
+iex&gt; Enum.each john, fn({field, value}) -&gt; IO.puts(value) end
+** (Protocol.UndefinedError) protocol Enumerable not implemented for %User{age: 27, name: &quot;John&quot;}
+</code></pre><p>&#x7136;&#x800C;,&#x7ED3;&#x6784;&#x4F53;&#x4E5F;&#x662F;&#x6620;&#x5C04;,&#x80FD;&#x591F;&#x4F7F;&#x7528;<code>Map</code>&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x51FD;&#x6570;:</p>
+<pre><code>iex&gt; kurt = Map.put(%User{}, :name, &quot;Kurt&quot;)
+%User{age: 27, name: &quot;Kurt&quot;}
+iex&gt; Map.merge(kurt, %User{name: &quot;Takashi&quot;})
+%User{age: 27, name: &quot;Takashi&quot;}
+iex&gt; Map.keys(john)
+[:__struct__, :age, :name]
+</code></pre><p>&#x7ED3;&#x6784;&#x4F53;&#x534F;&#x8BAE;&#x4E3A;Elixir&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7279;&#x6027;:&#x6570;&#x636E;&#x591A;&#x6001;&#x6027;.&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x63A2;&#x7D22;&#x7684;.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./14_Module_attributes.html" class="navigation navigation-prev " aria-label="Previous page: Module attributes"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./16_Protocols.html" class="navigation navigation-next " aria-label="Next page: Protocols"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

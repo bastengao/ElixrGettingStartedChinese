@@ -1,0 +1,642 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Binaries strings and char lists | Elixir官网的入门教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./7_Keywords_and_maps.html" />
+    
+    
+    <link rel="prev" href="./5_case_cond_and_if.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="6" data-basepath="." data-revision="Tue Aug 09 2016 21:03:17 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1_Introduction.html">
+            
+                
+                    <a href="./1_Introduction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2_Basic_types.html">
+            
+                
+                    <a href="./2_Basic_types.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Basic types
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="3_Basic_operators.html">
+            
+                
+                    <a href="./3_Basic_operators.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Basic operators
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="4_Pattern_matching.html">
+            
+                
+                    <a href="./4_Pattern_matching.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pattern matching
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="5_case_cond_and_if.html">
+            
+                
+                    <a href="./5_case_cond_and_if.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Case cond and if
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6" data-path="6_Binaries_strings_and_char_lists.html">
+            
+                
+                    <a href="./6_Binaries_strings_and_char_lists.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Binaries strings and char lists
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="7_Keywords_and_maps.html">
+            
+                
+                    <a href="./7_Keywords_and_maps.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Keywords and maps
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="8_Modules.html">
+            
+                
+                    <a href="./8_Modules.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Modules
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="9_Rescursion.html">
+            
+                
+                    <a href="./9_Rescursion.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Rescursion
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="10_Enumerables_and_streams.html">
+            
+                
+                    <a href="./10_Enumerables_and_streams.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Enumerables and streams
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="11_Processes.html">
+            
+                
+                    <a href="./11_Processes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Processes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="12_IO_and_the_file_system.html">
+            
+                
+                    <a href="./12_IO_and_the_file_system.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Io and the file system
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="13_alias_require_and_import.html">
+            
+                
+                    <a href="./13_alias_require_and_import.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Alias require and import
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="14_Module_attributes.html">
+            
+                
+                    <a href="./14_Module_attributes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Module attributes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="15_Structs.html">
+            
+                
+                    <a href="./15_Structs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Structs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="16_Protocols.html">
+            
+                
+                    <a href="./16_Protocols.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Protocols
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="17_Comprehensions.html">
+            
+                
+                    <a href="./17_Comprehensions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Comprehensions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="18_sigils.html">
+            
+                
+                    <a href="./18_sigils.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Sigils
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="19_try_catch_and_rescue.html">
+            
+                
+                    <a href="./19_try_catch_and_rescue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        Try catch and rescue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="20" data-path="20_Typespecs_and_behaviours.html">
+            
+                
+                    <a href="./20_Typespecs_and_behaviours.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>20.</b>
+                        
+                        Typespecs and behaviours
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21" data-path="21_Erlang_libraries.html">
+            
+                
+                    <a href="./21_Erlang_libraries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.</b>
+                        
+                        Erlang libraries
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="22" data-path="22_Where_to_go_next.html">
+            
+                
+                    <a href="./22_Where_to_go_next.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>22.</b>
+                        
+                        Where to go next
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Elixir官网的入门教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E4%BA%8C%E8%BF%9B%E5%88%B6%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8">&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x7B26;&#x5217;&#x8868;</h1>
+<pre><code>1. UTF-8&#x548C;Unicode
+2. &#x4E8C;&#x8FDB;&#x5236;&#x6570;(&#x548C;&#x4F4D;&#x4E32;)
+3. &#x5B57;&#x7B26;&#x5217;&#x8868;
+</code></pre><p>&#x5728;&#x201C;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x201D;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x5B66;&#x4F1A;&#x4F7F;&#x7528;<code>is_binary/1</code>&#x51FD;&#x6570;&#x6765;&#x68C0;&#x67E5;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>iex&gt; string = &quot;hello&quot;
+&quot;hello&quot;
+iex&gt; is_binary(string)
+true
+</code></pre><p>&#x672C;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4ECB;&#x7ECD;&#x4EC0;&#x4E48;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x8054;&#x7CFB;&#x7684;&#xFF0C;&#x8FD8;&#x6709;&#x5355;&#x5F15;&#x53F7;&#x7684;&#x503C;&#xFF0C;<code>like this</code>&#xFF0C;&#x5728;Elixir&#x4E2D;&#x4EE3;&#x8868;&#x4EC0;&#x4E48;&#x3002;</p>
+<h1 id="utf-8%E5%92%8Cunicode">UTF-8&#x548C;Unicode</h1>
+<p>&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E00;&#x6BB5;UTF-8&#x7F16;&#x7801;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x3002;&#x4E3A;&#x4E86;&#x7406;&#x89E3;&#x5B83;&#x4EEC;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x9700;&#x8981;&#x660E;&#x767D;&#x5B57;&#x8282;&#x4E0E;&#x4EE3;&#x7801;&#x70B9;&#x7684;&#x533A;&#x522B;&#x3002;</p>
+<p>Unicode&#x6807;&#x51C6;&#x5C06;&#x4EE3;&#x7801;&#x70B9;&#x8D4B;&#x503C;&#x7ED9;&#x8BB8;&#x591A;&#x6211;&#x4EEC;&#x719F;&#x77E5;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5B57;&#x6BCD;<code>a</code>&#x62E5;&#x6709;&#x4EE3;&#x7801;&#x70B9;<code>97</code>&#xFF0C;&#x5B57;&#x6BCD;<code>&#x142;</code>&#x62E5;&#x6709;&#x4EE3;&#x7801;&#x70B9;<code>322</code>&#x3002;&#x5F53;&#x5C06;&#x5B57;&#x7B26;&#x4E32;<code>&quot;he&#x142;&#x142;o&quot;</code>&#x5199;&#x5165;&#x78C1;&#x76D8;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x4EE3;&#x7801;&#x70B9;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x8282;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9075;&#x5B88;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x70B9;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x80FD;&#x5199;&#x5165;<code>&quot;he&#x142;&#x142;o&quot;</code>&#xFF0C;&#x56E0;&#x4E3A;<code>&#x142;</code>&#x7684;&#x4EE3;&#x7801;&#x70B9;&#x662F;<code>322</code>&#xFF0C;&#x800C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x53EA;&#x80FD;&#x8868;&#x793A;<code>0</code>&#x5230;<code>255</code>&#x7684;&#x6570;&#x5B57;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x603B;&#x6709;&#x529E;&#x6CD5;&#x8868;&#x793A;<code>&quot;he&#x142;&#x142;o&quot;</code>&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x7F16;&#x7801;&#x5728;&#x53D1;&#x6325;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x5F53;&#x7528;&#x5B57;&#x8282;&#x6765;&#x8868;&#x793A;&#x4EE3;&#x7801;&#x70B9;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;Elixir&#x9009;&#x62E9;UTF-8&#x7F16;&#x7801;&#x4F5C;&#x4E3A;&#x5176;&#x4E3B;&#x8981;&#x548C;&#x9ED8;&#x8BA4;&#x7684;&#x7F16;&#x7801;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x8BF4;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;UTF-8&#x7F16;&#x7801;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x90A3;&#x610F;&#x5473;&#x7740;&#x5B83;&#x662F;&#x4E00;&#x4E32;&#x901A;&#x8FC7;UTF-8&#x7F16;&#x7801;&#x6765;&#x4EE3;&#x8868;&#x7279;&#x5B9A;&#x4EE3;&#x7801;&#x70B9;&#x7684;&#x5B57;&#x8282;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6765;&#x4EE3;&#x8868;&#x4F8B;&#x5982;<code>&#x142;</code>&#x7684;<code>322</code>&#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#x70B9;&#x3002;&#x8FD9;&#x5C31;&#x662F;<code>byte_size/1</code>&#x4E0E;<code>String.length/1</code>&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x540C;&#x7684;&#x539F;&#x56E0;&#xFF1A;</p>
+<pre><code>iex&gt; string = &quot;he&#x142;&#x142;o&quot;
+&quot;he&#x142;&#x142;o&quot;
+iex&gt; byte_size(string)
+7
+iex&gt; String.length(string)
+5
+</code></pre><p>UTF-8&#x8981;&#x6C42;&#x4EE5;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6765;&#x8868;&#x793A;<code>h</code>&#xFF0C;<code>e</code>&#x548C;<code>o</code>&#x7684;&#x4EE3;&#x7801;&#x70B9;&#xFF0C;&#x4EE5;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x8868;&#x793A;<code>&#x142;</code>&#x7684;&#x3002;&#x5728;Elixir&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>?</code>&#x6765;&#x5F97;&#x5230;&#x4EE3;&#x7801;&#x70B9;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code>iex&gt; ?a
+97
+iex&gt; ?&#x142;
+322
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>String</code>&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x6765;&#x4F9D;&#x7167;&#x4EE3;&#x7801;&#x70B9;&#x5206;&#x5272;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>iex&gt; String.codepoints(&quot;he&#x142;&#x142;o&quot;)
+[&quot;h&quot;, &quot;e&quot;, &quot;&#x142;&quot;, &quot;&#x142;&quot;, &quot;o&quot;]
+</code></pre><p>&#x4F60;&#x4F1A;&#x53D1;&#x73B0;Elixir&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x6709;&#x7740;&#x826F;&#x597D;&#x7684;&#x652F;&#x6301;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;Elixir&#x5C06;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x5185;&#x5BB9;&#x653E;&#x5230;&#x4E86;&#x6587;&#x7AE0;&#x201C;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x5D29;&#x6E83;&#x4E86;&#x201D;&#x4E2D;&#x3002;</p>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x53EA;&#x662F;&#x6545;&#x4E8B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7;<code>is_binary/1</code>&#x5F97;&#x77E5;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x6240;&#x4EE5;Elixir&#x4E00;&#x5B9A;&#x662F;&#x4EE5;&#x4E00;&#x79CD;&#x5E95;&#x5C42;&#x7C7B;&#x578B;&#x63A7;&#x5236;&#x7740;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x8BA8;&#x8BBA;&#x4E00;&#x4E0B;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF01;</p>
+<h1 id="%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-%E5%92%8C%E4%BD%8D%E4%B8%B2">&#x4E8C;&#x8FDB;&#x5236;&#x6570;(&#x548C;&#x4F4D;&#x4E32;)</h1>
+<p>&#x5728;Elixir&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;<code>&lt;&lt;&gt;&gt;</code>&#x6765;&#x5B9A;&#x4E49;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF1A;</p>
+<pre><code>iex&gt; &lt;&lt;0, 1, 2, 3&gt;&gt;
+&lt;&lt;0, 1, 2, 3&gt;&gt;
+iex&gt; byte_size(&lt;&lt;0, 1, 2, 3&gt;&gt;)
+4
+</code></pre><p>&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#x5B57;&#x8282;&#x3002;&#x8FD9;&#x4E9B;&#x5B57;&#x8282;&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x4F55;&#x5F62;&#x5F0F;&#x7EC4;&#x5408;&#xFF0C;&#x5373;&#x4F7F;&#x4E0D;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>iex&gt; String.valid?(&lt;&lt;239, 191, 191&gt;&gt;)
+false
+</code></pre><p>&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x7B26;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x8FDE;&#x63A5;&#x7B26;&#xFF1A;</p>
+<pre><code>iex&gt; &lt;&lt;0, 1&gt;&gt; &lt;&gt; &lt;&lt;2, 3&gt;&gt;
+&lt;&lt;0, 1, 2, 3&gt;&gt;
+</code></pre><p>Elixir&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x6280;&#x5DE7;&#x662F;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4E0E;&#x7A7A;&#x5B57;&#x8282;<code>&lt;&lt;0&gt;&gt;</code>&#x76F8;&#x8FDE;&#x63A5;&#xFF0C;&#x4EE5;&#x67E5;&#x770B;&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x90E8;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF1A;</p>
+<pre><code>iex&gt; &quot;he&#x142;&#x142;o&quot; &lt;&gt; &lt;&lt;0&gt;&gt;
+&lt;&lt;104, 101, 197, 130, 197, 130, 111, 0&gt;&gt;
+</code></pre><p>&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x6570;&#x5B57;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x56E0;&#x6B64;&#x4E0A;&#x9650;&#x662F;255.&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x5927;&#x5C0F;&#x6765;&#x5B58;&#x653E;&#x5927;&#x4E8E;255&#x7684;&#x6570;&#xFF0C;&#x6216;&#x5C06;&#x4EE3;&#x7801;&#x70B9;&#x4EE5;utf8&#x683C;&#x5F0F;&#x8868;&#x793A;&#xFF1A;</p>
+<pre><code>iex&gt; &lt;&lt;255&gt;&gt;
+&lt;&lt;255&gt;&gt;
+iex&gt; &lt;&lt;256&gt;&gt; # truncated
+&lt;&lt;0&gt;&gt;
+iex&gt; &lt;&lt;256 :: size(16)&gt;&gt; # use 16 bits (2 bytes) to store the number
+&lt;&lt;1, 0&gt;&gt;
+iex&gt; &lt;&lt;256 :: utf8&gt;&gt; # the number is a code point
+&quot;&#x100;&quot;
+iex&gt; &lt;&lt;256 :: utf8, 0&gt;&gt;
+&lt;&lt;196, 128, 0&gt;&gt;
+</code></pre><p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6709;8&#x4F4D;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x5176;&#x4F20;&#x9001;&#x81F3;1&#x4F4D;&#x7A7A;&#x95F4;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<pre><code>iex&gt; &lt;&lt;1 :: size(1)&gt;&gt;
+&lt;&lt;1::size(1)&gt;&gt;
+iex&gt; &lt;&lt;2 :: size(1)&gt;&gt; # truncated
+&lt;&lt;0::size(1)&gt;&gt;
+iex&gt; is_binary(&lt;&lt; 1 :: size(1)&gt;&gt;)
+false
+iex&gt; is_bitstring(&lt;&lt; 1 :: size(1)&gt;&gt;)
+true
+iex&gt; bit_size(&lt;&lt; 1 :: size(1)&gt;&gt;)
+1
+</code></pre><p>&#x5176;&#x503C;&#x4E0D;&#x518D;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x800C;&#x662F;&#x4F4D;&#x4E32;&#x2014;&#x2014;&#x53EA;&#x662F;&#x4E00;&#x4E32;&#x4F4D;&#xFF01;&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x4F4D;&#x6570;&#x4E3A;8&#x7684;&#x500D;&#x6570;&#x7684;&#x4F4D;&#x4E32;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x4E0E;&#x4F4D;&#x4E32;&#x8FDB;&#x884C;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#xFF1A;</p>
+<pre><code>iex&gt; &lt;&lt;0, 1, x&gt;&gt; = &lt;&lt;0, 1, 2&gt;&gt;
+&lt;&lt;0, 1, 2&gt;&gt;
+iex&gt; x
+2
+iex&gt; &lt;&lt;0, 1, x&gt;&gt; = &lt;&lt;0, 1, 2, 3&gt;&gt;
+** (MatchError) no match of right hand side value: &lt;&lt;0, 1, 2, 3&gt;&gt;
+</code></pre><p>&#x6CE8;&#x610F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x5339;&#x914D;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5165;&#x53E3;&#x90FD;&#x671F;&#x671B;&#x5339;&#x914D;&#x5230;8bit&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x672A;&#x77E5;&#x5927;&#x5C0F;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6A21;&#x5F0F;&#x7684;&#x7ED3;&#x5C3E;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x4FEE;&#x6539;&#x5668;&#xFF1A;</p>
+<pre><code>iex&gt; &lt;&lt;0, 1, x :: binary&gt;&gt; = &lt;&lt;0, 1, 2, 3&gt;&gt;
+&lt;&lt;0, 1, 2, 3&gt;&gt;
+iex&gt; x
+&lt;&lt;2, 3&gt;&gt;
+</code></pre><p>&#x53EF;&#x4EE5;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x7B26;&#x8FBE;&#x5230;&#x7C7B;&#x4F3C;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
+<pre><code>iex&gt; &quot;he&quot; &lt;&gt; rest = &quot;hello&quot;
+&quot;hello&quot;
+iex&gt; rest
+&quot;llo&quot;
+</code></pre><p>&#x5173;&#x4E8E;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0F;&#x4F4D;&#x4E32;&#x6784;&#x9020;&#x7B26;<code>&lt;&lt;&gt;&gt;</code>&#x7684;&#x5B8C;&#x6574;&#x4ECB;&#x7ECD;&#x53EF;&#x4EE5;&#x5728;Elixir&#x6587;&#x6863;&#x4E2D;&#x627E;&#x5230;&#x3002;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x4F4D;&#x4E32;&#xFF0C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E00;&#x4E2A;&#x4EE5;UTF-8&#x683C;&#x5F0F;&#x7F16;&#x7801;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x800C;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x4F4D;&#x6570;&#x4E3A;8&#x7684;&#x500D;&#x6570;&#x7684;&#x4F4D;&#x4E32;&#x3002;&#x5C3D;&#x7BA1;&#x6211;&#x4EEC;&#x5C55;&#x793A;&#x4E86;Elixir&#x5904;&#x7406;bit&#x4F4D;&#x548C;&#x5B57;&#x8282;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x4F46;99%&#x7684;&#x65F6;&#x95F4;&#x4F60;&#x90FD;&#x5728;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;<code>is_binary/1</code>&#x548C;<code>byte_size/1</code>&#x51FD;&#x6570;&#x3002;</p>
+<h1 id="%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8">&#x5B57;&#x7B26;&#x5217;&#x8868;</h1>
+<p>&#x5B57;&#x7B26;&#x5217;&#x8868;&#x4EC5;&#x4EC5;&#x662F;&#x5B57;&#x7B26;&#x7684;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code>iex&gt; &apos;he&#x142;&#x142;o&apos;
+[104, 101, 322, 322, 111]
+iex&gt; is_list &apos;he&#x142;&#x142;o&apos;
+true
+iex&gt; &apos;hello&apos;
+&apos;hello&apos;
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5217;&#x8868;&#x5305;&#x542B;&#x4E86;&#x5355;&#x5F15;&#x53F7;&#x95F4;&#x7684;&#x5B57;&#x7B26;&#x7684;&#x4EE3;&#x7801;&#x70B9;&#xFF0C;&#x800C;&#x975E;&#x5B57;&#x8282;(&#x6CE8;&#x610F;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5B57;&#x7B26;&#x8D85;&#x51FA;&#x4E86;ASCII&#x7684;&#x8303;&#x56F4;&#xFF0C;IEx&#x5C06;&#x53EA;&#x8F93;&#x51FA;&#x5176;&#x4EE3;&#x7801;&#x70B9;)&#x3002;&#x6240;&#x4EE5;&#x53CC;&#x5F15;&#x53F7;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;(&#x4E8C;&#x8FDB;&#x5236;&#x6570;)&#xFF0C;&#x5355;&#x5F15;&#x53F7;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5217;&#x8868;(&#x5217;&#x8868;)&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;&#x5B57;&#x7B26;&#x5217;&#x8868;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x4E0E;Erlang&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x56E0;&#x4E3A;&#x4E00;&#x4E9B;&#x65E7;&#x7684;&#x5E93;&#x4E0D;&#x63A5;&#x53D7;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>to_string/1</code>&#x548C;<code>to_char_list/1</code>&#x51FD;&#x6570;&#x6765;&#x76F8;&#x4E92;&#x8F6C;&#x5316;&#x5B57;&#x7B26;&#x5217;&#x8868;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>iex&gt; to_char_list &quot;he&#x142;&#x142;o&quot;
+[104, 101, 322, 322, 111]
+iex&gt; to_string &apos;he&#x142;&#x142;o&apos;
+&quot;he&#x142;&#x142;o&quot;
+iex&gt; to_string :hello
+&quot;hello&quot;
+iex&gt; to_string 1
+&quot;1&quot;
+</code></pre><p>&#x6CE8;&#x610F;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x662F;&#x591A;&#x6001;&#x7684;&#x3002;&#x5B83;&#x4EEC;&#x4E0D;&#x4EC5;&#x80FD;&#x5C06;&#x5B57;&#x7B26;&#x5217;&#x8868;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x80FD;&#x5C06;&#x6574;&#x6570;&#xFF0C;&#x539F;&#x5B50;&#x7B49;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x4ECB;&#x7ECD;&#x5B8C;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x7B26;&#x5217;&#x8868;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x8BA8;&#x8BBA;&#x7684;&#x662F;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./5_case_cond_and_if.html" class="navigation navigation-prev " aria-label="Previous page: Case cond and if"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./7_Keywords_and_maps.html" class="navigation navigation-next " aria-label="Next page: Keywords and maps"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

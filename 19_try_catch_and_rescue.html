@@ -1,0 +1,672 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Try catch and rescue | Elixir官网的入门教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./20_Typespecs_and_behaviours.html" />
+    
+    
+    <link rel="prev" href="./18_sigils.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="19" data-basepath="." data-revision="Tue Aug 09 2016 21:03:17 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1_Introduction.html">
+            
+                
+                    <a href="./1_Introduction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2_Basic_types.html">
+            
+                
+                    <a href="./2_Basic_types.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Basic types
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="3_Basic_operators.html">
+            
+                
+                    <a href="./3_Basic_operators.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Basic operators
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="4_Pattern_matching.html">
+            
+                
+                    <a href="./4_Pattern_matching.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pattern matching
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="5_case_cond_and_if.html">
+            
+                
+                    <a href="./5_case_cond_and_if.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Case cond and if
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="6_Binaries_strings_and_char_lists.html">
+            
+                
+                    <a href="./6_Binaries_strings_and_char_lists.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Binaries strings and char lists
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="7_Keywords_and_maps.html">
+            
+                
+                    <a href="./7_Keywords_and_maps.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Keywords and maps
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="8_Modules.html">
+            
+                
+                    <a href="./8_Modules.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Modules
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="9_Rescursion.html">
+            
+                
+                    <a href="./9_Rescursion.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Rescursion
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="10_Enumerables_and_streams.html">
+            
+                
+                    <a href="./10_Enumerables_and_streams.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Enumerables and streams
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="11_Processes.html">
+            
+                
+                    <a href="./11_Processes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Processes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="12_IO_and_the_file_system.html">
+            
+                
+                    <a href="./12_IO_and_the_file_system.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Io and the file system
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="13_alias_require_and_import.html">
+            
+                
+                    <a href="./13_alias_require_and_import.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Alias require and import
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="14_Module_attributes.html">
+            
+                
+                    <a href="./14_Module_attributes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Module attributes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="15_Structs.html">
+            
+                
+                    <a href="./15_Structs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Structs
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="16_Protocols.html">
+            
+                
+                    <a href="./16_Protocols.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Protocols
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="17_Comprehensions.html">
+            
+                
+                    <a href="./17_Comprehensions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Comprehensions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="18_sigils.html">
+            
+                
+                    <a href="./18_sigils.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Sigils
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="19" data-path="19_try_catch_and_rescue.html">
+            
+                
+                    <a href="./19_try_catch_and_rescue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        Try catch and rescue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="20" data-path="20_Typespecs_and_behaviours.html">
+            
+                
+                    <a href="./20_Typespecs_and_behaviours.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>20.</b>
+                        
+                        Typespecs and behaviours
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21" data-path="21_Erlang_libraries.html">
+            
+                
+                    <a href="./21_Erlang_libraries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.</b>
+                        
+                        Erlang libraries
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="22" data-path="22_Where_to_go_next.html">
+            
+                
+                    <a href="./22_Where_to_go_next.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>22.</b>
+                        
+                        Where to go next
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Elixir官网的入门教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%B0%9D%E8%AF%95-%E6%8A%93%E5%8F%96%E5%92%8C%E8%A7%A3%E6%95%91">&#x5C1D;&#x8BD5;,&#x6293;&#x53D6;&#x548C;&#x89E3;&#x6551;</h1>
+<ol>
+<li>&#x9519;&#x8BEF;</li>
+<li>&#x629B;&#x51FA;</li>
+<li>&#x9000;&#x51FA;</li>
+<li>&#x4E4B;&#x540E;</li>
+<li>&#x53D8;&#x91CF;&#x57DF;</li>
+</ol>
+<p>Elixir&#x6709;&#x4E09;&#x79CD;&#x5F02;&#x5E38;&#x673A;&#x5236;:&#x9519;&#x8BEF;,&#x5F15;&#x53D1;&#x548C;&#x9000;&#x51FA;.&#x672C;&#x7AE0;&#x6211;&#x4EEC;&#x5C06;&#x63A2;&#x7D22;&#x5B83;&#x4EEC;&#x6BCF;&#x4E00;&#x79CD;&#x4EE5;&#x53CA;&#x5176;&#x4F7F;&#x7528;&#x7684;&#x573A;&#x5408;.</p>
+<h1 id="%E9%94%99%E8%AF%AF">&#x9519;&#x8BEF;</h1>
+<p>&#x9519;&#x8BEF;(&#x6216; <em>&#x5F02;&#x5E38;</em> )&#x7528;&#x4E8E;&#x4EE3;&#x7801;&#x4E2D;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x65F6;.&#x5F53;&#x8BD5;&#x56FE;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x4E0E;&#x539F;&#x5B50;&#x76F8;&#x52A0;,&#x5C31;&#x53EF;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x7684;&#x4F8B;&#x5B50;:</p>
+<pre><code>iex&gt; :foo + 1
+** (ArithmeticError) bad argument in arithmetic expression
+     :erlang.+(:foo, 1)
+</code></pre><p>&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;&#x53EF;&#x6709;<code>raise/1</code>&#x5F15;&#x53D1;:</p>
+<pre><code>iex&gt; raise &quot;oops&quot;
+** (RuntimeError) oops
+</code></pre><p>&#x5176;&#x5B83;&#x9519;&#x8BEF;&#x53EF;&#x4EE5;&#x7531;<code>raise/2</code>&#x5F15;&#x53D1;,&#x901A;&#x8FC7;&#x4F20;&#x9001;&#x9519;&#x8BEF;&#x540D;&#x79F0;&#x548C;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x8BCD;&#x5217;&#x8868;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;:</p>
+<pre><code>iex&gt; raise ArgumentError, message: &quot;invalid argument foo&quot;
+** (ArgumentError) invalid argument foo
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x4E2D;&#x4F7F;&#x7528;<code>defexception</code>&#x7ED3;&#x6784;&#x6765;&#x5B9A;&#x4E49;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x9519;&#x8BEF;;&#x8FD9;&#x65F6;&#x4F60;&#x521B;&#x9020;&#x4E86;&#x4E00;&#x4E2A;&#x4E0E;&#x6A21;&#x5757;&#x540C;&#x540D;&#x7684;&#x9519;&#x8BEF;.&#x6700;&#x5E38;&#x7528;&#x7684;&#x573A;&#x666F;&#x662F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5E26;&#x4FE1;&#x606F;&#x573A;&#x7684;&#x5F02;&#x5E38;:</p>
+<pre><code>iex&gt; defmodule MyError do
+iex&gt;   defexception message: &quot;default message&quot;
+iex&gt; end
+iex&gt; raise MyError
+** (MyError) default message
+iex&gt; raise MyError, message: &quot;custom message&quot;
+** (MyError) custom message
+</code></pre><p>&#x9519;&#x8BEF;&#x53EF;&#x4EE5;&#x88AB;<strong>&#x89E3;&#x6551;</strong>,&#x901A;&#x8FC7;<code>try/rescue</code>&#x7ED3;&#x6784;:</p>
+<pre><code>iex&gt; try do
+...&gt;   raise &quot;oops&quot;
+...&gt; rescue
+...&gt;   e in RuntimeError -&gt; e
+...&gt; end
+%RuntimeError{message: &quot;oops&quot;}
+</code></pre><p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5C06;&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;&#x89E3;&#x6551;,&#x5E76;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x672C;&#x8EAB;,&#x7136;&#x540E;&#x5C06;&#x5176;&#x6253;&#x5370;&#x5230;<code>iex</code>&#x4E2D;.</p>
+<p>&#x5982;&#x679C;&#x9519;&#x8BEF;&#x5BF9;&#x4F60;&#x6BEB;&#x65E0;&#x7528;&#x5904;,&#x4F60;&#x53EF;&#x4EE5;&#x4E0D;&#x663E;&#x793A;&#x5B83;:</p>
+<pre><code>iex&gt; try do
+...&gt;   raise &quot;oops&quot;
+...&gt; rescue
+...&gt;   RuntimeError -&gt; &quot;Error!&quot;
+...&gt; end
+&quot;Error!&quot;
+</code></pre><p>&#x5B9E;&#x9645;&#x4E2D;,Elixir&#x5F00;&#x53D1;&#x8005;&#x5F88;&#x5C11;&#x7528;&#x5230;<code>try/rescue</code>&#x7ED3;&#x6784;.&#x4F8B;&#x5982;,&#x5F53;&#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x88AB;&#x6253;&#x5F00;&#x65F6;,&#x8BB8;&#x591A;&#x8BED;&#x8A00;&#x4F1A;&#x5F3A;&#x5236;&#x4F60;&#x89E3;&#x6551;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;.&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;,Elixir&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;<code>File.read/1</code>&#x51FD;&#x6570;,&#x5176;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x88AB;&#x6210;&#x529F;&#x6253;&#x5F00;&#x7684;&#x4FE1;&#x606F;&#x7684;&#x5143;&#x7EC4;.</p>
+<pre><code>iex&gt; File.read &quot;hello&quot;
+{:error, :enoent}
+iex&gt; File.write &quot;hello&quot;, &quot;world&quot;
+:ok
+iex&gt; File.read &quot;hello&quot;
+{:ok, &quot;world&quot;}
+</code></pre><p>&#x8FD9;&#x91CC;&#x6CA1;&#x6709;<code>try/rescue</code>.&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5904;&#x7406;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x4E0D;&#x540C;&#x8F93;&#x51FA;,&#x4F60;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528;<code>case</code>&#x6765;&#x8FDB;&#x884C;&#x6A21;&#x5F0F;&#x5339;&#x914D;:</p>
+<pre><code>iex&gt; case File.read &quot;hello&quot; do
+...&gt;   {:ok, body}      -&gt; IO.puts &quot;Success: #{body}&quot;
+...&gt;   {:error, reason} -&gt; IO.puts &quot;Error: #{reason}&quot;
+...&gt; end
+</code></pre><p>&#x6700;&#x7EC8;,&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x53D1;&#x751F;&#x7684;&#x9519;&#x8BEF;&#x662F;&#x5426;&#x4E3A;&#x5F02;&#x5E38;&#x5C06;&#x7531;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x6765;&#x51B3;&#x5B9A;.&#x8FD9;&#x5C31;&#x662F;Elixir&#x4E3A;&#x4F55;&#x4E0D;&#x7ED9;<code>File.read/1</code>&#x548C;&#x5176;&#x5B83;&#x8BB8;&#x591A;&#x51FD;&#x6570;&#x5F3A;&#x52A0;&#x5F02;&#x5E38;.&#x800C;&#x662F;&#x7559;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x9009;&#x62E9;&#x6700;&#x597D;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;.</p>
+<p>&#x5F53;&#x4F60;&#x786E;&#x4FE1;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5B58;&#x5728;(&#x7F3A;&#x5931;&#x6587;&#x4EF6;&#x786E;&#x5B9E;&#x662F;&#x9519;&#x8BEF;&#x7684;),&#x4F60;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528;<code>File.read!/1</code>:</p>
+<pre><code>iex&gt; File.read! &quot;unknown&quot;
+** (File.Error) could not read file unknown: no such file or directory
+    (elixir) lib/file.ex:305: File.read!/1
+</code></pre><p>&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x51FD;&#x6570;&#x9075;&#x5FAA;&#x5BF9;&#x5E94;&#x7684;&#x5F02;&#x5E38;&#x5F15;&#x53D1;&#x6A21;&#x5F0F;,&#x800C;&#x975E;&#x8FD4;&#x56DE;&#x5339;&#x914D;&#x5143;&#x7EC4;.&#x51FD;&#x6570;<code>foo</code>&#x4F1A;&#x8FD4;&#x56DE;<code>{:ok, result}</code>&#x6216;<code>{:error, reason}</code>&#x5143;&#x7EC4;,&#x800C;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;(<code>foo!</code>,&#x540C;&#x540D;&#x4F46;&#x5E26;&#x6709;<code>!</code>)&#x867D;&#x7136;&#x63A5;&#x53D7;&#x4E0E;<code>foo</code>&#x540C;&#x6837;&#x7684;&#x53C2;&#x6570;,&#x4F46;&#x9047;&#x5230;&#x9519;&#x8BEF;&#x65F6;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;.&#x5982;&#x679C;&#x4E00;&#x5207;&#x6B63;&#x5E38;,<code>foo!</code>&#x4F1A;&#x8FD4;&#x56DE;(&#x6CA1;&#x6709;&#x88AB;&#x5143;&#x7EC4;&#x5305;&#x88F9;&#x7684;)&#x7ED3;&#x679C;.<code>File</code>&#x6A21;&#x5757;&#x5C31;&#x662F;&#x5F88;&#x597D;&#x7684;&#x4F8B;&#x5B50;.</p>
+<p>&#x5728;Elixir&#x4E2D;,&#x6211;&#x4EEC;&#x907F;&#x514D;&#x4F7F;&#x7528;<code>try/rescue</code>,&#x56E0;&#x4E3A;<strong>&#x6211;&#x4EEC;&#x4E0D;&#x5728;&#x63A7;&#x5236;&#x6D41;&#x4E2D;&#x4F7F;&#x7528;&#x9519;&#x8BEF;</strong>.&#x6211;&#x4EEC;&#x8FD9;&#x6837;&#x89E3;&#x91CA;&#x9519;&#x8BEF;:&#x5B83;&#x4EEC;&#x662F;&#x9884;&#x7559;&#x7ED9;&#x610F;&#x6599;&#x5916;&#x6216;&#x5F02;&#x5E38;&#x7684;&#x60C5;&#x5F62;&#x7684;.&#x5F53;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x6D41;&#x7ED3;&#x6784;&#x65F6;,&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<em>&#x629B;&#x51FA;</em>.&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5C06;&#x8BB2;&#x5230;.</p>
+<h1 id="%E6%8A%9B%E5%87%BA">&#x629B;&#x51FA;</h1>
+<p>&#x5728;Elixir&#x4E2D;,&#x4E00;&#x4E2A;&#x503C;&#x53EF;&#x4EE5;&#x88AB;&#x629B;&#x51FA;&#x7136;&#x540E;&#x88AB;&#x6355;&#x83B7;.<code>throw</code>&#x548C;<code>catch</code>&#x662F;&#x9884;&#x7559;&#x7ED9;&#x90A3;&#x4E9B;&#x53EA;&#x6709;&#x5B83;&#x4EEC;&#x624D;&#x80FD;&#x68C0;&#x7D22;&#x5230;&#x7684;&#x503C;&#x7684;.</p>
+<p>&#x8FD9;&#x4E9B;&#x60C5;&#x51B5;&#x5F88;&#x5C11;&#x9047;&#x5230;,&#x9664;&#x4E86;&#x5F53;&#x4E0E;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x5408;&#x9002;&#x7684;API&#x7684;&#x5E93;&#x76F8;&#x8FDE;&#x63A5;&#x65F6;.&#x4F8B;&#x5982;,&#x60F3;&#x8C61;&#x4E00;&#x4E0B;<code>Enum</code>&#x6A21;&#x5757;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x4EFB;&#x4F55;API&#x6765;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x503C;,&#x800C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4ECE;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;13&#x7684;&#x500D;&#x6570;:</p>
+<pre><code>iex&gt; try do
+...&gt;   Enum.each -50..50, fn(x) -&gt;
+...&gt;     if rem(x, 13) == 0, do: throw(x)
+...&gt;   end
+...&gt;   &quot;Got nothing&quot;
+...&gt; catch
+...&gt;   x -&gt; &quot;Got #{x}&quot;
+...&gt; end
+&quot;Got -39&quot;
+</code></pre><p>&#x7531;&#x4E8E;<code>Enum</code><em>&#x5B9E;&#x9645;&#x4E0A;</em> &#x63D0;&#x4F9B;&#x4E86;&#x5408;&#x9002;&#x7684;API,&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Enum.find/2</code>:</p>
+<pre><code>iex&gt; Enum.find -50..50, &amp;(rem(&amp;1, 13) == 0)
+-39
+</code></pre><h1 id="%E9%80%80%E5%87%BA">&#x9000;&#x51FA;</h1>
+<p>&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x6240;&#x6709;Elixir&#x4EE3;&#x7801;&#x90FD;&#x4F1A;&#x4E92;&#x76F8;&#x4EA4;&#x6D41;.&#x5F53;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x56E0;&quot;&#x81EA;&#x7136;&#x539F;&#x56E0;&quot;(&#x672A;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;)&#x6B7B;&#x4EA1;&#x65F6;,&#x5C31;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;<code>exit</code>&#x4FE1;&#x53F7;.&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x9000;&#x51FA;&#x4FE1;&#x53F7;&#x4E5F;&#x4F1A;&#x8BA9;&#x8FDB;&#x7A0B;&#x6B7B;&#x4EA1;:</p>
+<pre><code>iex&gt; spawn_link fn -&gt; exit(1) end
+#PID&lt;0.56.0&gt;
+** (EXIT from #PID&lt;0.56.0&gt;) 1
+</code></pre><p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;,&#x94FE;&#x63A5;&#x7684;&#x8FDB;&#x7A0B;&#x6B7B;&#x4E86;,&#x662F;&#x56E0;&#x4E3A;&#x53D1;&#x9001;&#x4E86;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;1&#x7684;<code>exit</code>&#x4FE1;&#x53F7;.Elixir&#x58F3;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x4E86;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5E76;&#x5C06;&#x5176;&#x6253;&#x5370;&#x5230;&#x7EC8;&#x7AEF;.</p>
+<p><code>exit</code>&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;<code>try/catch</code>&quot;&#x6355;&#x83B7;&quot;:</p>
+<pre><code>iex&gt; try do
+...&gt;   exit &quot;I am exiting&quot;
+...&gt; catch
+...&gt;   :exit, _ -&gt; &quot;not really&quot;
+...&gt; end
+&quot;not really&quot;
+</code></pre><p>&#x4F7F;&#x7528;<code>try/catch</code>&#x5DF2;&#x7ECF;&#x5F88;&#x4E0D;&#x5E38;&#x89C1;,&#x7528;&#x5B83;&#x6765;&#x6355;&#x83B7;&#x9000;&#x51FA;&#x5C31;&#x66F4;&#x5C11;&#x89C1;&#x4E86;.</p>
+<p><code>exit</code>&#x4FE1;&#x53F7;&#x662F;&#x7531;Erlang VM&#x63D0;&#x4F9B;&#x7684;&#x5BB9;&#x9519;&#x7CFB;&#x7EDF;&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;.&#x8FDB;&#x7A0B;&#x901A;&#x5E38;&#x5728;&#x76D1;&#x7763;&#x6811;&#x4E0B;&#x8FD0;&#x884C;,&#x8FD9;&#x4E9B;&#x6811;&#x662F;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x7684;,&#x53EA;&#x662F;&#x7B49;&#x5F85;&#x6765;&#x81EA;&#x76D1;&#x7763;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x9000;&#x51FA;&#x4FE1;&#x53F7;.&#x4E00;&#x65E6;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x9000;&#x51FA;&#x4FE1;&#x53F7;,&#x76D1;&#x7763;&#x7B56;&#x7565;&#x5C06;&#x542F;&#x52A8;,&#x5E76;&#x91CD;&#x542F;&#x76D1;&#x7763;&#x8FDB;&#x7A0B;.</p>
+<p>&#x6B63;&#x662F;&#x7531;&#x4E8E;&#x76D1;&#x7763;&#x7CFB;&#x7EDF;&#x7684;&#x5B58;&#x5728;,&#x4F7F;&#x5F97;<code>try/catch</code>&#x4E0E;<code>try/rescue</code>&#x7ED3;&#x6784;&#x5728;Elixir&#x4E2D;&#x5982;&#x6B64;&#x5C11;&#x89C1;.&#x8BED;&#x6C14;&#x89E3;&#x6551;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;,&#x6211;&#x4EEC;&#x66F4;&#x613F;&#x610F;&quot;&#x5FEB;&#x901F;&#x5931;&#x8D25;&quot;,&#x56E0;&#x4E3A;&#x76D1;&#x7763;&#x6811;&#x4F1A;&#x4FDD;&#x8BC1;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x80FD;&#x591F;&#x5728;&#x51FA;&#x9519;&#x4E4B;&#x540E;&#x56DE;&#x5230;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;.</p>
+<h1 id="%E4%B9%8B%E5%90%8E">&#x4E4B;&#x540E;</h1>
+<p>&#x5728;&#x8D44;&#x6E90;&#x7ECF;&#x8FC7;&#x67D0;&#x4E9B;&#x6709;&#x53EF;&#x80FD;&#x5F15;&#x53D1;&#x9519;&#x8BEF;&#x7684;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;,&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x5176;&#x5DF2;&#x7ECF;&#x88AB;&#x6E05;&#x7406;&#x5E72;&#x51C0;&#x4E86;.<code>try/after</code>&#x7ED3;&#x6784;&#x5141;&#x8BB8;&#x4F60;&#x8FD9;&#x6837;&#x505A;.&#x4F8B;&#x5982;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<code>after</code>&#x4ECE;&#x53E5;&#x6765;&#x5173;&#x95ED;&#x5B83;--&#x5373;&#x4F7F;&#x7C97;&#x9519;&#x4E86;:</p>
+<pre><code>iex&gt; {:ok, file} = File.open &quot;sample&quot;, [:utf8, :write]
+iex&gt; try do
+...&gt;   IO.write file, &quot;ol&#xE1;&quot;
+...&gt;   raise &quot;oops, something went wrong&quot;
+...&gt; after
+...&gt;   File.close(file)
+...&gt; end
+** (RuntimeError) oops, something went wrong
+</code></pre><p>&#x65E0;&#x8BBA;<code>try</code>&#x5757;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x6210;&#x529F;,<code>after</code>&#x4ECE;&#x53E5;&#x90FD;&#x4F1A;&#x88AB;&#x6267;&#x884C;.&#x7136;&#x800C;,&#x6CE8;&#x610F;,&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x4E86;,&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x8FDB;&#x7A0B;&#x4F1A;&#x7ACB;&#x523B;&#x9000;&#x51FA;&#x800C;&#x4E14;&#x4E0D;&#x4F1A;&#x6267;&#x884C;<code>after</code>&#x4ECE;&#x53E5;.&#x56E0;&#x6B64;<code>after</code>&#x53EA;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x8F6F;&#x4FDD;&#x9669;.&#x5E78;&#x8FD0;&#x7684;&#x662F;,Elixir&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x94FE;&#x63A5;&#x5230;&#x4E86;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;,&#x6240;&#x4EE5;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5D29;&#x6E83;&#x65F6;&#x5B83;&#x4EEC;&#x603B;&#x4F1A;&#x88AB;&#x5173;&#x95ED;,&#x8FD9;&#x662F;&#x72EC;&#x7ACB;&#x4E8E;<code>after</code>&#x4ECE;&#x53E5;&#x7684;.&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4F8B;&#x5982;ETS&#x8868;,&#x5957;&#x63A5;&#x5B57;,&#x7AEF;&#x53E3;&#x7B49;&#x7B49;&#x4E5F;&#x662F;&#x6210;&#x7ACB;&#x7684;.</p>
+<p>&#x6709;&#x65F6;&#x4F60;&#x4F1A;&#x60F3;&#x8981;&#x5C06;&#x6574;&#x4E2A;&#x51FD;&#x6570;&#x5305;&#x88F9;&#x5728;<code>try</code>&#x7ED3;&#x6784;&#x5185;,&#x901A;&#x5E38;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x5728;&#x4E4B;&#x540E;&#x80FD;&#x88AB;&#x6267;&#x884C;.&#x8FD9;&#x65F6;,Elixir&#x5141;&#x8BB8;&#x4F60;&#x7701;&#x7565;<code>try</code>&#x8FD9;&#x4E00;&#x884C;:</p>
+<pre><code>iex&gt; defmodule RunAfter do
+...&gt;   def without_even_trying do
+...&gt;     raise &quot;oops&quot;
+...&gt;   after
+...&gt;     IO.puts &quot;cleaning up!&quot;
+...&gt;   end
+...&gt; end
+iex&gt; RunAfter.without_even_trying
+cleaning up!
+** (RuntimeError) oops
+</code></pre><p>Elixir&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x51FD;&#x6570;&#x4F53;&#x5305;&#x88F9;&#x5230;<code>try</code>&#x91CC;,&#x65E0;&#x8BBA;&#x9009;&#x62E9;<code>after</code>,<code>rescue</code>&#x6216;<code>catch</code>&#x4E2D;&#x7684;&#x54EA;&#x4E00;&#x4E2A;.</p>
+<h1 id="%E5%8F%98%E9%87%8F%E5%9F%9F">&#x53D8;&#x91CF;&#x57DF;</h1>
+<p>&#x8981;&#x7262;&#x8BB0;<code>try/catch/rescue/after</code>&#x5757;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x4E0D;&#x4F1A;&#x6CC4;&#x9732;&#x5230;&#x5916;&#x90E8;&#x5185;&#x5BB9;&#x4E2D;.&#x8FD9;&#x662F;&#x56E0;&#x4E3A;<code>try</code>&#x5757;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;,&#x56E0;&#x6B64;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x88AB;&#x7ED1;&#x5B9A;&#x5728;&#x7B2C;&#x4E00;&#x4F4D;.&#x6362;&#x53E5;&#x8BDD;&#x8BF4;,&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x662F;&#x975E;&#x6CD5;&#x7684;:</p>
+<pre><code>iex&gt; try do
+...&gt;   raise &quot;fail&quot;
+...&gt;   what_happened = :did_not_raise
+...&gt; rescue
+...&gt;   _ -&gt; what_happened = :rescued
+...&gt; end
+iex&gt; what_happened
+** (RuntimeError) undefined function: what_happened/0
+</code></pre><p>&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;,&#x4F60;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;<code>try</code>&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;:</p>
+<pre><code>iex&gt; what_happened =
+...&gt;   try do
+...&gt;     raise &quot;fail&quot;
+...&gt;     :did_not_raise
+...&gt;   rescue
+...&gt;     _ -&gt; :rescued
+...&gt;   end
+iex&gt; what_happened
+:rescued
+</code></pre><p>&#x5BF9;<code>try</code>,<code>catch</code>&#x548C;<code>rescue</code>&#x7684;&#x4ECB;&#x7ECD;&#x5230;&#x6B64;&#x7ED3;&#x675F;.&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x76F8;&#x8F83;&#x4E8E;&#x5176;&#x4ED6;&#x8BED;&#x8A00;,&#x5728;Elixir&#x4E2D;&#x8F83;&#x5C11;&#x7528;&#x5230;&#x5B83;&#x4EEC;,&#x5C3D;&#x7BA1;&#x5728;&#x67D0;&#x4E9B;&#x5E93;&#x6216;&#x7279;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&quot;&#x6309;&#x7167;&#x89C4;&#x5219;&quot;&#x4E66;&#x5199;&#x65F6;,&#x5B83;&#x4EEC;&#x5F88;&#x6709;&#x7528;.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./18_sigils.html" class="navigation navigation-prev " aria-label="Previous page: Sigils"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./20_Typespecs_and_behaviours.html" class="navigation navigation-next " aria-label="Next page: Typespecs and behaviours"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
